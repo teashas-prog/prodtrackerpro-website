@@ -221,7 +221,7 @@ footer{border-top:1px solid var(--border);padding:60px 0 40px}
 <section id="contact" class="section" style="background:var(--bg2);"><div class="container">
   <div style="text-align:center;"><div class="section-label or reveal">Contact</div><div class="section-title reveal">Get in touch</div><p class="section-sub reveal" style="margin:0 auto;">Have questions? Need a demo? We're here to help you get started.</p></div>
   <div class="contact-grid">
-    <div class="contact-card reveal"><div class="contact-icon">📧</div><h3>Email</h3><p><a href="mailto:info@prodtrackerpro.com">info@prodtrackerpro.com</a></p><p>We respond within 24 hours</p></div>
+    <div class="contact-card reveal"><div class="contact-icon">📧</div><h3>Email</h3><p><a href="/cdn-cgi/l/email-protection#c7aea9a1a887b7b5a8a3b3b5a6a4aca2b5b7b5a8e9a4a8aa"><span class="__cf_email__" data-cfemail="c0a9aea6af80b0b2afa4b4b2a1a3aba5b2b0b2afeea3afad">[email&#160;protected]</span></a></p><p>We respond within 24 hours</p></div>
     <div class="contact-card reveal"><div class="contact-icon">📱</div><h3>WhatsApp</h3><p><a href="https://wa.me/18761234567">Message us on WhatsApp</a></p><p>Quick questions and demos</p></div>
     <div class="contact-card reveal"><div class="contact-icon">📍</div><h3>Location</h3><p>Kingston, Jamaica</p><p>Serving manufacturers worldwide</p></div>
   </div>
@@ -238,27 +238,66 @@ footer{border-top:1px solid var(--border);padding:60px 0 40px}
 <div class="modal-overlay" id="trialModal" onclick="if(event.target===this)closeTrialModal()">
   <div class="modal">
     <button class="modal-close" onclick="closeTrialModal()">&times;</button>
-    <h2><span class="b">Start</span> your <span class="o">free trial</span></h2>
-    <p>Choose how you'd like to use Production Tracker Pro</p>
 
-    <a href="https://app.prodtrackerpro.com" class="modal-option">
-      <div class="modal-option-icon">🌐</div>
-      <div>
-        <h3>Open in browser</h3>
-        <p>Use instantly on any device — no download needed. Works on phone, tablet, and desktop.</p>
-      </div>
-    </a>
+    <!-- STEP 1: Choose -->
+    <div id="modalStep1">
+      <h2><span class="b">Start</span> your <span class="o">free trial</span></h2>
+      <p>Choose how you'd like to use Production Tracker Pro</p>
 
-    <div class="modal-option" style="cursor:default;">
-      <div class="modal-option-icon">📱</div>
-      <div>
-        <h3>Download the app</h3>
-        <p>Native app for the best mobile experience with push notifications and offline access.</p>
-        <div class="modal-stores">
-          <div class="store-badge soon"><span class="icon">🍎</span> App Store — Coming Soon</div>
-          <div class="store-badge soon"><span class="icon">▶</span> Google Play — Coming Soon</div>
+      <div class="modal-option" onclick="document.getElementById('modalStep1').style.display='none';document.getElementById('modalStep2').style.display='block'">
+        <div class="modal-option-icon">🌐</div>
+        <div>
+          <h3>Open in browser</h3>
+          <p>Use instantly on any device — add to your home screen for an app-like experience.</p>
         </div>
       </div>
+
+      <div class="modal-option" style="cursor:default;">
+        <div class="modal-option-icon">📱</div>
+        <div>
+          <h3>Download the app</h3>
+          <p>Native app for the best mobile experience with push notifications and offline access.</p>
+          <div class="modal-stores">
+            <div class="store-badge soon"><span class="icon">🍎</span> App Store — Coming Soon</div>
+            <div class="store-badge soon"><span class="icon">▶</span> Google Play — Coming Soon</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2: Install to home screen -->
+    <div id="modalStep2" style="display:none;">
+      <h2><span class="b">Add to</span> <span class="o">home screen</span></h2>
+      <p>Install Production Tracker Pro on your phone for an app-like experience — no app store needed</p>
+
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <span style="font-size:28px;">🍎</span>
+          <div><div style="font-family:var(--heading);font-weight:800;font-size:15px;text-transform:uppercase;">iPhone / iPad</div></div>
+        </div>
+        <div style="font-size:14px;color:var(--muted);line-height:2;">
+          <div><span style="color:var(--blue);font-weight:700;">1.</span> Open <strong style="color:var(--text);">app.prodtrackerpro.com</strong> in Safari</div>
+          <div><span style="color:var(--blue);font-weight:700;">2.</span> Tap the <strong style="color:var(--text);">Share button</strong> <span style="font-size:18px;">⬆</span> at the bottom</div>
+          <div><span style="color:var(--blue);font-weight:700;">3.</span> Scroll down and tap <strong style="color:var(--text);">"Add to Home Screen"</strong></div>
+          <div><span style="color:var(--blue);font-weight:700;">4.</span> Tap <strong style="color:var(--text);">"Add"</strong> — done!</div>
+        </div>
+      </div>
+
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <span style="font-size:28px;">🤖</span>
+          <div><div style="font-family:var(--heading);font-weight:800;font-size:15px;text-transform:uppercase;">Android</div></div>
+        </div>
+        <div style="font-size:14px;color:var(--muted);line-height:2;">
+          <div><span style="color:var(--orange);font-weight:700;">1.</span> Open <strong style="color:var(--text);">app.prodtrackerpro.com</strong> in Chrome</div>
+          <div><span style="color:var(--orange);font-weight:700;">2.</span> Tap the <strong style="color:var(--text);">menu</strong> <span style="font-size:16px;">⋮</span> (three dots, top right)</div>
+          <div><span style="color:var(--orange);font-weight:700;">3.</span> Tap <strong style="color:var(--text);">"Install app"</strong> or <strong style="color:var(--text);">"Add to Home Screen"</strong></div>
+          <div><span style="color:var(--orange);font-weight:700;">4.</span> Tap <strong style="color:var(--text);">"Install"</strong> — done!</div>
+        </div>
+      </div>
+
+      <a href="https://app.prodtrackerpro.com" style="display:block;width:100%;padding:16px;border-radius:10px;text-align:center;text-decoration:none;font-weight:700;font-size:16px;font-family:var(--body);background:var(--blue);color:#fff;margin-bottom:12px;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Open app.prodtrackerpro.com</a>
+      <button onclick="document.getElementById('modalStep1').style.display='block';document.getElementById('modalStep2').style.display='none'" style="display:block;width:100%;padding:12px;border-radius:10px;text-align:center;font-weight:600;font-size:14px;font-family:var(--body);background:none;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--blue)'" onmouseout="this.style.borderColor='var(--border)'">← Back</button>
     </div>
   </div>
 </div>
@@ -268,19 +307,14 @@ footer{border-top:1px solid var(--border);padding:60px 0 40px}
   <div class="footer-grid">
     <div class="footer-brand"><div class="nav-logo-mark"><span class="w">Production </span><span class="b">Tracker </span><span class="o">Pro</span></div><p>Production management software built for small manufacturers. From raw materials to final delivery — track every step of your process.</p></div>
     <div class="footer-col"><h4>Product</h4><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#how">How it works</a><a href="#casestudy">Case study</a><a href="https://app.prodtrackerpro.com">Log in</a></div>
-    <div class="footer-col"><h4>Contact</h4><a href="mailto:info@prodtrackerpro.com">info@prodtrackerpro.com</a><a href="https://wa.me/18761234567">WhatsApp</a><a href="#contact">Get in touch</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="/cdn-cgi/l/email-protection#244d4a424b6454564b40505645474f415654564b0a474b49"><span class="__cf_email__" data-cfemail="b5dcdbd3daf5c5c7dad1c1c7d4d6ded0c7c5c7da9bd6dad8">[email&#160;protected]</span></a><a href="https://wa.me/18761234567">WhatsApp</a><a href="#contact">Get in touch</a></div>
     <div class="footer-col"><h4>Legal</h4><a href="#">Privacy policy</a><a href="#">Terms of service</a></div>
   </div>
   <div class="footer-bottom"><p>&copy; 2026 Production Tracker Pro. A product of Reggae Carmella LTD.</p><p>Kingston, Jamaica</p></div>
 </div></footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function openTrialModal(){document.getElementById('trialModal').classList.add('active')}
-function closeTrialModal(){document.getElementById('trialModal').classList.remove('active')}
+function closeTrialModal(){document.getElementById('trialModal').classList.remove('active');document.getElementById('modalStep1').style.display='block';document.getElementById('modalStep2').style.display='none'}
 const observer=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){if(this.getAttribute('onclick'))return;e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeTrialModal()});
-</script>
-</body>
-</html>
+document.querySelectorAll('.reveal').forEach(el=>observ
