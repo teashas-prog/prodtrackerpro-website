@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Production Tracker Pro — Track. Manage. Grow.</title>
 <meta name="description" content="Production management software for manufacturers. Track inventory, manage staff time, monitor stocks, and measure performance.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231F2937'/><text x='3' y='13' font-size='9' font-weight='900' fill='%23fff'>P</text><text x='3' y='24' font-size='10' font-weight='900' fill='%230D6EFD'>T</text><text x='14' y='24' font-size='10' font-weight='900' fill='%23FF8C1A'>P</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--blue:#0D6EFD;--blue-glow:rgba(13,110,253,0.12);--orange:#FF8C1A;--orange-glow:rgba(255,140,26,0.12);--green:#2ECC71;--green-glow:rgba(46,204,113,0.1);--dark:#1F2937;--bg:#0F1419;--bg2:#151C25;--text:#E5E7EB;--muted:#8B949E;--card:rgba(31,41,55,0.5);--border:rgba(139,148,158,0.12);--heading:'Montserrat',sans-serif;--body:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
@@ -15,7 +14,6 @@ body::before{content:'';position:fixed;inset:0;z-index:0;background-image:linear
 .w{color:#fff}.b{color:var(--blue)}.o{color:var(--orange)}.g{color:var(--green)}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 0;background:rgba(15,20,25,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
 nav .container{display:flex;align-items:center;justify-content:space-between}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
 .nav-logo-mark{font-family:var(--heading);font-weight:900;font-size:18px;letter-spacing:-0.5px;text-transform:uppercase}
 .nav-links{display:flex;gap:28px;align-items:center}.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s}.nav-links a:hover{color:var(--blue)}
 .nav-cta{background:var(--blue)!important;color:#fff!important;padding:10px 24px!important;border-radius:8px;font-weight:700!important;transition:transform 0.2s,box-shadow 0.2s}.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px var(--blue-glow)}
@@ -26,52 +24,37 @@ nav .container{display:flex;align-items:center;justify-content:space-between}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--orange-glow);border:1px solid rgba(255,140,26,0.25);padding:8px 20px;border-radius:100px;margin-bottom:32px;font-size:13px;font-weight:600;color:var(--orange);animation:fadeInDown 0.6s ease-out}
 .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--orange);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-.hero-logo{width:100%;max-width:1100px;margin:0 auto 32px;animation:fadeInUp 0.7s ease-out}
-.hero-logo img{width:100%;height:auto;border-radius:8px}
+.hero-logo{width:100%;max-width:1100px;margin:0 auto 32px;animation:fadeInUp 0.7s ease-out}.hero-logo img{width:100%;height:auto;border-radius:8px}
 .hero-sub{font-size:18px;color:var(--muted);max-width:620px;margin:0 auto 40px;line-height:1.8;animation:fadeInUp 0.9s ease-out}
 .hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeInUp 1s ease-out}
-.btn-primary{background:var(--blue);color:#fff;padding:16px 40px;border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;font-family:var(--body);border:none;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px var(--blue-glow)}
+.btn-primary{background:var(--blue);color:#fff;padding:16px 40px;border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;font-family:var(--body);border:none;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px var(--blue-glow)}
 .btn-orange{background:var(--orange)}.btn-orange:hover{box-shadow:0 8px 32px var(--orange-glow)}
-.btn-secondary{background:transparent;color:var(--text);padding:16px 40px;border-radius:10px;font-size:16px;font-weight:600;text-decoration:none;font-family:var(--body);border:1px solid var(--border);cursor:pointer;transition:border-color 0.2s,background 0.2s}
-.btn-secondary:hover{border-color:var(--blue);background:var(--blue-glow)}
+.btn-secondary{background:transparent;color:var(--text);padding:16px 40px;border-radius:10px;font-size:16px;font-weight:600;text-decoration:none;font-family:var(--body);border:1px solid var(--border);cursor:pointer;transition:border-color 0.2s,background 0.2s}.btn-secondary:hover{border-color:var(--blue);background:var(--blue-glow)}
 .section{padding:100px 0}
 .section-label{font-family:var(--heading);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:4px;margin-bottom:16px}.section-label.bl{color:var(--blue)}.section-label.or{color:var(--orange)}.section-label.gr{color:var(--green)}
 .section-title{font-family:var(--heading);font-size:clamp(32px,4.5vw,52px);font-weight:900;letter-spacing:-1px;text-transform:uppercase;margin-bottom:20px;line-height:1.05}
 .section-sub{font-size:17px;color:var(--muted);max-width:560px;line-height:1.8}
 .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:60px}
-.feature-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 24px;transition:border-color 0.3s,transform 0.3s;position:relative;overflow:hidden}
-.feature-card:hover{border-color:var(--blue);transform:translateY(-4px)}
+.feature-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 24px;transition:border-color 0.3s,transform 0.3s;position:relative;overflow:hidden}.feature-card:hover{border-color:var(--blue);transform:translateY(-4px)}
 .feature-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--orange));opacity:0;transition:opacity 0.3s}.feature-card:hover::after{opacity:1}
-.feature-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+.fi{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
 .fi-bl{background:var(--blue-glow)}.fi-or{background:var(--orange-glow)}.fi-gr{background:var(--green-glow)}
-.feature-card h3{font-family:var(--heading);font-size:18px;font-weight:800;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.3px}
-.feature-card p{font-size:14px;color:var(--muted);line-height:1.7}
+.feature-card h3{font-family:var(--heading);font-size:18px;font-weight:800;margin-bottom:8px;text-transform:uppercase}.feature-card p{font-size:14px;color:var(--muted);line-height:1.7}
 .audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:60px}
 .audience-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:32px 24px;text-align:center;transition:transform 0.3s}.audience-card:hover{transform:translateY(-4px)}
-.audience-icon{font-size:40px;margin-bottom:16px}
 .audience-card h3{font-family:var(--heading);font-size:18px;font-weight:800;text-transform:uppercase;margin-bottom:8px}.audience-card p{font-size:14px;color:var(--muted);line-height:1.7}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:60px}.step{text-align:center}
 .step-num{width:60px;height:60px;border-radius:50%;border:2px solid var(--blue);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:24px;font-weight:800;color:var(--blue);margin:0 auto 20px}
 .step h3{font-family:var(--heading);font-size:18px;font-weight:800;margin-bottom:8px;text-transform:uppercase}.step p{font-size:14px;color:var(--muted);line-height:1.7}
-/* CASE STUDY */
 .case-study{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:48px 40px;margin-top:60px;position:relative;overflow:hidden}
 .case-study::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--orange),var(--green))}
-.cs-header{display:flex;align-items:center;gap:20px;margin-bottom:32px;flex-wrap:wrap}
 .cs-badge{background:var(--green-glow);border:1px solid rgba(46,204,113,0.2);color:var(--green);font-family:var(--heading);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:100px}
 .cs-company{font-family:var(--heading);font-size:28px;font-weight:900;text-transform:uppercase}
-.cs-desc{font-size:15px;color:var(--muted)}
 .cs-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:12px;overflow:hidden;margin:28px 0}
 .cs-stat{background:var(--bg2);padding:24px 16px;text-align:center}
-.cs-stat-num{font-family:var(--mono);font-size:28px;font-weight:800;color:var(--blue)}
-.cs-stat-label{font-size:12px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:1px;font-weight:600}
-.cs-results{margin-top:28px}
-.cs-result{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border)}
-.cs-result:last-child{border-bottom:none}
-.cs-check{color:var(--green);font-size:16px;font-weight:700;flex-shrink:0;margin-top:2px}
-.cs-result-text{font-size:15px;line-height:1.7}
-.cs-result-text strong{color:var(--text)}
-/* PRICING */
+.cs-stat-num{font-family:var(--mono);font-size:28px;font-weight:800;color:var(--blue)}.cs-stat-label{font-size:12px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.cs-result{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border)}.cs-result:last-child{border-bottom:none}
+.cs-check{color:var(--green);font-size:16px;font-weight:700;flex-shrink:0;margin-top:2px}.cs-result-text{font-size:15px;line-height:1.7}.cs-result-text strong{color:var(--text)}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:60px}
 .price-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px 28px;position:relative;transition:transform 0.3s}.price-card:hover{transform:translateY(-4px)}
 .price-card.pop{border-color:var(--blue)}.price-card.pop::before{content:'MOST POPULAR';position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--blue),var(--orange));color:#fff;padding:5px 18px;border-radius:100px;font-family:var(--heading);font-size:11px;font-weight:800;letter-spacing:2px}
@@ -79,242 +62,197 @@ nav .container{display:flex;align-items:center;justify-content:space-between}
 .price-amount{font-family:var(--mono);font-size:48px;font-weight:900;letter-spacing:-2px}.price-amount span{font-size:16px;color:var(--muted);font-weight:400}
 .price-desc{font-size:14px;color:var(--muted);margin:8px 0 24px}
 .price-features{list-style:none;margin-bottom:32px}.price-features li{font-size:14px;color:var(--muted);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}.price-features li::before{content:'✓';color:var(--green);font-weight:700}
-.price-btn{display:block;width:100%;padding:14px;border-radius:10px;text-align:center;text-decoration:none;font-weight:700;font-size:15px;font-family:var(--body);border:none;cursor:pointer;transition:all 0.2s}
-.price-btn-outline{background:transparent;border:1px solid var(--border);color:var(--text)}.price-btn-outline:hover{border-color:var(--blue);background:var(--blue-glow)}
-.price-btn-fill{background:var(--blue);color:#fff}.price-btn-fill:hover{box-shadow:0 8px 32px var(--blue-glow)}
-/* CONTACT */
+.pbtn{display:block;width:100%;padding:14px;border-radius:10px;text-align:center;text-decoration:none;font-weight:700;font-size:15px;font-family:var(--body);border:none;cursor:pointer;transition:all 0.2s}
+.pbtn-o{background:transparent;border:1px solid var(--border);color:var(--text)}.pbtn-o:hover{border-color:var(--blue);background:var(--blue-glow)}
+.pbtn-f{background:var(--blue);color:#fff}.pbtn-f:hover{box-shadow:0 8px 32px var(--blue-glow)}
 .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:60px}
 .contact-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:32px 24px;text-align:center;transition:transform 0.3s}.contact-card:hover{transform:translateY(-4px)}
-.contact-icon{font-size:36px;margin-bottom:16px}
-.contact-card h3{font-family:var(--heading);font-size:16px;font-weight:800;text-transform:uppercase;margin-bottom:8px}
-.contact-card p{font-size:14px;color:var(--muted);line-height:1.7}
-.contact-card a{color:var(--blue);text-decoration:none;font-weight:600}
-.contact-card a:hover{text-decoration:underline}
-/* CTA */
+.contact-card h3{font-family:var(--heading);font-size:16px;font-weight:800;text-transform:uppercase;margin-bottom:8px}.contact-card p{font-size:14px;color:var(--muted);line-height:1.7}.contact-card a{color:var(--blue);text-decoration:none;font-weight:600}
 .cta-section{text-align:center;padding:100px 0;position:relative}
 .cta-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,var(--orange-glow) 0%,transparent 55%);pointer-events:none}
-.cta-section h2{font-family:var(--heading);font-size:clamp(32px,5vw,56px);font-weight:900;margin-bottom:12px;letter-spacing:-0.5px;text-transform:uppercase;position:relative}
+.cta-section h2{font-family:var(--heading);font-size:clamp(32px,5vw,56px);font-weight:900;margin-bottom:12px;text-transform:uppercase;position:relative}
 .cta-section p{font-size:18px;color:var(--muted);margin-bottom:40px;position:relative}
 footer{border-top:1px solid var(--border);padding:60px 0 40px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}.footer-brand p{font-size:14px;color:var(--muted);margin-top:12px;line-height:1.7;max-width:280px}
 .footer-col h4{font-family:var(--heading);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:3px;margin-bottom:16px}
 .footer-col a{display:block;font-size:14px;color:var(--muted);text-decoration:none;padding:4px 0;transition:color 0.2s}.footer-col a:hover{color:var(--blue)}
 .footer-bottom{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}.footer-bottom p{font-size:13px;color:var(--muted)}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:500;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(4px)}.modal-overlay.active{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:40px 32px;max-width:440px;width:100%;position:relative;animation:fadeInUp 0.3s ease-out;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--muted);font-size:24px;cursor:pointer;width:36px;height:36px;border-radius:8px}.modal-close:hover{background:rgba(255,255,255,0.05)}
+.modal h2{font-family:var(--heading);font-size:24px;font-weight:900;text-transform:uppercase;margin-bottom:8px;text-align:center}
+.modal>div>p{font-size:14px;color:var(--muted);text-align:center;margin-bottom:28px;line-height:1.6}
+.modal-option{display:flex;align-items:center;gap:16px;padding:20px;border:1px solid var(--border);border-radius:14px;margin-bottom:12px;cursor:pointer;transition:border-color 0.2s,background 0.2s;text-decoration:none;color:var(--text)}.modal-option:hover{border-color:var(--blue);background:var(--blue-glow)}
+.modal-option h3{font-family:var(--heading);font-size:16px;font-weight:800;text-transform:uppercase;margin-bottom:2px}.modal-option p{font-size:13px;color:var(--muted);text-align:left;margin:0;line-height:1.5}
+.store-badge{display:inline-flex;align-items:center;gap:6px;background:var(--dark);border:1px solid var(--border);padding:6px 12px;border-radius:8px;font-size:11px;font-weight:600;color:var(--muted);margin-top:8px;margin-right:6px;opacity:0.5}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeInDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease-out,transform 0.6s ease-out}.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:768px){.nav-links{display:none}.mobile-menu{display:block}.audience-grid,.contact-grid{grid-template-columns:1fr}.features-grid,.steps,.pricing-grid{grid-template-columns:1fr}.cs-stats{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr;gap:32px}.hero{padding:100px 0 30px}.hero-actions{flex-direction:column;align-items:center}.btn-primary,.btn-secondary{width:100%;max-width:320px;text-align:center}.case-study{padding:28px 20px}.cs-header{flex-direction:column;align-items:flex-start}}
-
-/* TRIAL MODAL */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:500;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(4px)}
-.modal-overlay.active{display:flex}
-.modal{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:40px 32px;max-width:440px;width:100%;position:relative;animation:fadeInUp 0.3s ease-out}
-.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--muted);font-size:24px;cursor:pointer;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:background 0.2s}
-.modal-close:hover{background:rgba(255,255,255,0.05)}
-.modal h2{font-family:var(--heading);font-size:24px;font-weight:900;text-transform:uppercase;margin-bottom:8px;text-align:center}
-.modal p{font-size:14px;color:var(--muted);text-align:center;margin-bottom:28px;line-height:1.6}
-.modal-option{display:flex;align-items:center;gap:16px;padding:20px;border:1px solid var(--border);border-radius:14px;margin-bottom:12px;cursor:pointer;transition:border-color 0.2s,background 0.2s;text-decoration:none;color:var(--text)}
-.modal-option:hover{border-color:var(--blue);background:var(--blue-glow)}
-.modal-option-icon{font-size:32px;flex-shrink:0}
-.modal-option h3{font-family:var(--heading);font-size:16px;font-weight:800;text-transform:uppercase;margin-bottom:2px}
-.modal-option p{font-size:13px;color:var(--muted);text-align:left;margin:0;line-height:1.5}
-.modal-stores{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
-.store-badge{display:inline-flex;align-items:center;gap:6px;background:var(--dark);border:1px solid var(--border);padding:6px 12px;border-radius:8px;font-size:11px;font-weight:600;color:var(--muted)}
-.store-badge.soon{opacity:0.5}
-.store-badge .icon{font-size:16px}
+@media(max-width:768px){.nav-links{display:none}.mobile-menu{display:block}.audience-grid,.contact-grid{grid-template-columns:1fr}.features-grid,.steps,.pricing-grid{grid-template-columns:1fr}.cs-stats{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr;gap:32px}.hero{padding:100px 0 30px}.hero-actions{flex-direction:column;align-items:center}.btn-primary,.btn-secondary{width:100%;max-width:320px;text-align:center}.case-study{padding:28px 20px}}
 </style>
 </head>
 <body>
 
-<nav><div class="container"><a href="#" class="nav-logo"><div class="nav-logo-mark"><span class="w">Production </span><span class="b">Tracker </span><span class="o">Pro</span></div></a><div class="nav-links"><a href="#features">Features</a><a href="#who">Who it's for</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="#" onclick="openTrialModal();return false" class="nav-cta">Start free trial</a></div><button class="mobile-menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">☰</button></div></nav>
+<nav><div class="container">
+  <a href="#" style="text-decoration:none"><div class="nav-logo-mark"><span class="w">Production </span><span class="b">Tracker </span><span class="o">Pro</span></div></a>
+  <div class="nav-links"><a href="#features">Features</a><a href="#who">Who it's for</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="#" onclick="openModal();return false" class="nav-cta">Start free trial</a></div>
+  <button class="mobile-menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">&#9776;</button>
+</div></nav>
 
-<!-- HERO -->
 <section class="hero"><div class="container">
   <div class="hero-badge">Free pilot — join today</div>
-  <div class="hero-logo"><img src="production_tracker_pro_logo.png" alt="Production Tracker Pro — Track. Manage. Grow."></div>
+  <div class="hero-logo"><img src="production_tracker_pro_logo.png" alt="Production Tracker Pro"></div>
   <p class="hero-sub">Production management software built for manufacturers, factory managers, and production supervisors. Track inventory, manage staff time, monitor stocks, and measure performance — all from your phone or desktop.</p>
-  <div class="hero-actions"><a href="#" onclick="openTrialModal();return false" class="btn-primary">Start your free trial</a><a href="#features" class="btn-secondary">See all features</a></div>
+  <div class="hero-actions"><a href="#" onclick="openModal();return false" class="btn-primary">Start your free trial</a><a href="#features" class="btn-secondary">See all features</a></div>
 </div></section>
 
-<!-- FEATURES -->
 <section id="features" class="section"><div class="container">
   <div class="section-label bl reveal">Features</div>
   <div class="section-title reveal">Everything you need to<br>run your factory</div>
   <p class="section-sub reveal">From raw materials to final delivery — track every step of your manufacturing process in real-time.</p>
   <div class="features-grid">
-    <div class="feature-card reveal"><div class="feature-icon fi-bl">📊</div><h3>Production Tracking</h3><p>Log daily production counts, set targets, and track opening and closing stock. Color-coded progress bars show what's on track and what's behind. Batch codes keep everything traceable.</p></div>
-    <div class="feature-card reveal"><div class="feature-icon fi-or">📦</div><h3>Cases & Packing</h3><p>Track cases packed with automatic units-per-case calculations. The built-in packing calculator shows exactly how many units you can pack from today's production run.</p></div>
-    <div class="feature-card reveal"><div class="feature-icon fi-bl">🧪</div><h3>Raw Materials</h3><p>Four-view inventory system: Stock levels, Needed checklist, Purchases with tax tracking, and Gap analysis. Materials auto-deduct from stock when production is logged.</p></div>
-    <div class="feature-card reveal"><div class="feature-icon fi-gr">📍</div><h3>GPS Clock-In</h3><p>Staff can only clock in within your factory's GPS geofence. Eliminates buddy punching. Each person's location is verified individually with automatic overtime flagging.</p></div>
-    <div class="feature-card reveal"><div class="feature-icon fi-or">🧾</div><h3>Recipe Costing</h3><p>Link raw materials to product recipes. Instantly see cost per batch and cost per unit. When production is logged, materials automatically deduct based on recipe quantities.</p></div>
-    <div class="feature-card reveal"><div class="feature-icon fi-bl">🚚</div><h3>Orders & Deliveries</h3><p>Receive customer orders, tap "Deliver" when ready — the delivery form pre-fills automatically. Track delivery expenses including fuel, toll, and shipping costs.</p></div>
-    <div class="feature-card reveal"><div class="feature-icon fi-or">👥</div><h3>Role-Based Access</h3><p>Six role levels from CEO to Regular Team. Each person sees only the tabs relevant to their job. Managers can't access recipes. Sales can't modify production data.</p></div>
-    <div class="feature-card reveal"><div class="feature-icon fi-gr">📱</div><h3>WhatsApp Reports</h3><p>Generate and share daily production summaries, staff attendance, delivery logs, and material usage reports directly to WhatsApp with a single tap.</p></div>
-    <div class="feature-card reveal"><div class="feature-icon fi-bl">🌐</div><h3>Works Offline</h3><p>Factory internet is unreliable? No problem. Data saves locally and syncs automatically when connectivity returns. Real-time sync across all devices when online.</p></div>
+    <div class="feature-card reveal"><div class="fi fi-bl">&#128202;</div><h3>Production Tracking</h3><p>Log daily production counts, set targets, and track opening and closing stock. Color-coded progress bars show what's on track and what's behind.</p></div>
+    <div class="feature-card reveal"><div class="fi fi-or">&#128230;</div><h3>Cases & Packing</h3><p>Track cases packed with automatic units-per-case calculations. Packing calculator shows exactly how many units you can pack from today's production.</p></div>
+    <div class="feature-card reveal"><div class="fi fi-bl">&#129514;</div><h3>Raw Materials</h3><p>Four-view inventory system: Stock levels, Needed checklist, Purchases with tax tracking, and Gap analysis. Materials auto-deduct when production is logged.</p></div>
+    <div class="feature-card reveal"><div class="fi fi-gr">&#128205;</div><h3>GPS Clock-In</h3><p>Staff can only clock in within your factory's GPS geofence. Eliminates buddy punching. Each person's location is verified individually.</p></div>
+    <div class="feature-card reveal"><div class="fi fi-or">&#129534;</div><h3>Recipe Costing</h3><p>Link raw materials to product recipes. Instantly see cost per batch and cost per unit. Materials automatically deduct based on recipe quantities.</p></div>
+    <div class="feature-card reveal"><div class="fi fi-bl">&#128666;</div><h3>Orders & Deliveries</h3><p>Receive customer orders, tap "Deliver" when ready — the form pre-fills automatically. Track delivery expenses including fuel, toll, and shipping.</p></div>
+    <div class="feature-card reveal"><div class="fi fi-or">&#128101;</div><h3>Role-Based Access</h3><p>Six role levels from CEO to Regular Team. Each person sees only the tabs relevant to their job. Full access control built in.</p></div>
+    <div class="feature-card reveal"><div class="fi fi-gr">&#128241;</div><h3>WhatsApp Reports</h3><p>Generate and share daily production summaries, staff attendance, and delivery logs directly to WhatsApp with a single tap.</p></div>
+    <div class="feature-card reveal"><div class="fi fi-bl">&#127760;</div><h3>Works Offline</h3><p>Factory internet unreliable? Data saves locally and syncs automatically when connectivity returns. Real-time sync across all devices when online.</p></div>
   </div>
 </div></section>
 
-<!-- WHO IT'S FOR -->
-<section id="who" class="section" style="background:var(--bg2);"><div class="container">
-  <div style="text-align:center;"><div class="section-label gr reveal">Who it's for</div><div class="section-title reveal">Built for the people<br>who run factories</div></div>
+<section id="who" class="section" style="background:var(--bg2)"><div class="container">
+  <div style="text-align:center"><div class="section-label gr reveal">Who it's for</div><div class="section-title reveal">Built for the people<br>who run factories</div></div>
   <div class="audience-grid">
-    <div class="audience-card reveal"><div class="audience-icon">🏭</div><h3>Manufacturers</h3><p>Food, beverages, cosmetics, garments, packaging — any manufacturing operation that needs daily production tracking, inventory control, and staff management.</p></div>
-    <div class="audience-card reveal"><div class="audience-icon">👔</div><h3>Factory Managers</h3><p>Get real-time visibility into what's being produced, who's on the floor, what materials are running low, and what orders need to ship — without chasing paper.</p></div>
-    <div class="audience-card reveal"><div class="audience-icon">📋</div><h3>Production Supervisors</h3><p>Log production counts, track waste, manage your team's attendance, assign tasks, and flag issues — all from your phone while you're on the factory floor.</p></div>
+    <div class="audience-card reveal"><div style="font-size:40px;margin-bottom:16px">&#127981;</div><h3>Manufacturers</h3><p>Food, beverages, cosmetics, garments, packaging — any manufacturing operation that needs daily production tracking and inventory control.</p></div>
+    <div class="audience-card reveal"><div style="font-size:40px;margin-bottom:16px">&#128084;</div><h3>Factory Managers</h3><p>Get real-time visibility into what's being produced, who's on the floor, what materials are running low, and what orders need to ship.</p></div>
+    <div class="audience-card reveal"><div style="font-size:40px;margin-bottom:16px">&#128203;</div><h3>Production Supervisors</h3><p>Log production counts, track waste, manage your team's attendance, assign tasks, and flag issues — all from your phone.</p></div>
   </div>
 </div></section>
 
-<!-- HOW IT WORKS -->
 <section id="how" class="section"><div class="container">
-  <div style="text-align:center;"><div class="section-label or reveal">How it works</div><div class="section-title reveal">Up and running in<br>5 minutes</div></div>
+  <div style="text-align:center"><div class="section-label or reveal">How it works</div><div class="section-title reveal">Up and running in<br>5 minutes</div></div>
   <div class="steps">
     <div class="step reveal"><div class="step-num">1</div><h3>Set up your company</h3><p>Enter your company name, add your products and raw materials, set your tax rate, and configure team roles. The onboarding wizard walks you through each step.</p></div>
     <div class="step reveal"><div class="step-num">2</div><h3>Invite your team</h3><p>Add staff members and assign roles — CEO, Manager, Supervisor, Production, Sales, or Regular. Set your factory's GPS location for geofenced clock-in.</p></div>
-    <div class="step reveal"><div class="step-num">3</div><h3>Start tracking</h3><p>Your team logs production, packs cases, records deliveries, and manages materials from their phones. You see everything in real-time and share reports via WhatsApp.</p></div>
+    <div class="step reveal"><div class="step-num">3</div><h3>Start tracking</h3><p>Your team logs production, packs cases, records deliveries, and manages materials from their phones. You see everything in real-time.</p></div>
   </div>
 </div></section>
 
-<!-- CASE STUDY -->
-<section id="casestudy" class="section" style="background:var(--bg2);"><div class="container">
-  <div style="text-align:center;"><div class="section-label gr reveal">Case Study</div><div class="section-title reveal">How Reggae Carmella<br>transformed their factory</div></div>
-
+<section id="casestudy" class="section" style="background:var(--bg2)"><div class="container">
+  <div style="text-align:center"><div class="section-label gr reveal">Case Study</div><div class="section-title reveal">How Reggae Carmella<br>transformed their factory</div></div>
   <div class="case-study reveal">
-    <div class="cs-header">
+    <div style="display:flex;align-items:center;gap:20px;margin-bottom:32px;flex-wrap:wrap">
       <div class="cs-badge">Real Customer</div>
       <div>
         <div class="cs-company"><span class="w">Reggae Carmella</span> <span class="o">LTD</span></div>
-        <div class="cs-desc">Confectionery & Pastries Manufacturer — Kingston, Jamaica</div>
+        <div style="font-size:15px;color:var(--muted)">Confectionery & Pastries Manufacturer — Kingston, Jamaica</div>
       </div>
     </div>
-
     <div class="cs-stats">
       <div class="cs-stat"><div class="cs-stat-num">13</div><div class="cs-stat-label">Products tracked</div></div>
       <div class="cs-stat"><div class="cs-stat-num">46</div><div class="cs-stat-label">Raw materials</div></div>
       <div class="cs-stat"><div class="cs-stat-num">8</div><div class="cs-stat-label">Staff members</div></div>
       <div class="cs-stat"><div class="cs-stat-num">8</div><div class="cs-stat-label">Case types</div></div>
     </div>
-
-    <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:20px;">Reggae Carmella LTD manufactures authentic Jamaican confectionery and pastries — from Grater Cake and Coconut Drops to Gizzada and Tamarind Balls. Before Production Tracker Pro, daily production was tracked on paper, materials were counted manually, and staff attendance relied on the honour system.</p>
-
-    <div class="cs-results">
-      <div class="cs-result"><div class="cs-check">✓</div><div class="cs-result-text"><strong>GPS clock-in eliminated buddy punching</strong> — 8 staff members now verify their location within 100 metres of the factory before clocking in. No more signing in for absent colleagues.</div></div>
-      <div class="cs-result"><div class="cs-check">✓</div><div class="cs-result-text"><strong>Recipe costing revealed true product costs</strong> — linking 46 raw materials to product recipes showed the exact cost per batch and cost per unit, enabling better pricing decisions.</div></div>
-      <div class="cs-result"><div class="cs-check">✓</div><div class="cs-result-text"><strong>Auto material deduction saved hours of manual counting</strong> — when production counts are entered, raw materials automatically deduct based on recipe quantities. No more end-of-day stock discrepancies.</div></div>
-      <div class="cs-result"><div class="cs-check">✓</div><div class="cs-result-text"><strong>Orders-to-delivery workflow cut forgotten orders to zero</strong> — customer orders are logged, tracked, and when tapped "Deliver", the delivery form pre-fills automatically. Completed deliveries mark the order as done.</div></div>
-      <div class="cs-result"><div class="cs-check">✓</div><div class="cs-result-text"><strong>WhatsApp daily reports keep the CEO informed</strong> — one-tap production summaries sent via WhatsApp every evening, including staff hours, production counts, deliveries, and material usage.</div></div>
-      <div class="cs-result"><div class="cs-check">✓</div><div class="cs-result-text"><strong>Real-time sync across all factory phones</strong> — the Production Supervisor enters data on the floor, and the CEO sees it instantly on their phone without asking. No more end-of-day reporting delays.</div></div>
+    <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:20px">Reggae Carmella LTD manufactures authentic Jamaican confectionery and pastries — from Grater Cake and Coconut Drops to Gizzada and Tamarind Balls. Before Production Tracker Pro, daily production was tracked on paper, materials were counted manually, and staff attendance relied on the honour system.</p>
+    <div>
+      <div class="cs-result"><div class="cs-check">&#10003;</div><div class="cs-result-text"><strong>GPS clock-in eliminated buddy punching</strong> — 8 staff members now verify their location within 100 metres of the factory before clocking in.</div></div>
+      <div class="cs-result"><div class="cs-check">&#10003;</div><div class="cs-result-text"><strong>Recipe costing revealed true product costs</strong> — linking 46 raw materials to product recipes showed the exact cost per batch and cost per unit.</div></div>
+      <div class="cs-result"><div class="cs-check">&#10003;</div><div class="cs-result-text"><strong>Auto material deduction saved hours of manual counting</strong> — when production counts are entered, raw materials automatically deduct based on recipe quantities.</div></div>
+      <div class="cs-result"><div class="cs-check">&#10003;</div><div class="cs-result-text"><strong>Orders-to-delivery workflow cut forgotten orders to zero</strong> — customer orders are logged, tracked, and when tapped "Deliver", the delivery form pre-fills automatically.</div></div>
+      <div class="cs-result"><div class="cs-check">&#10003;</div><div class="cs-result-text"><strong>WhatsApp daily reports keep the CEO informed</strong> — one-tap production summaries sent via WhatsApp every evening.</div></div>
+      <div class="cs-result"><div class="cs-check">&#10003;</div><div class="cs-result-text"><strong>Real-time sync across all factory phones</strong> — the Supervisor enters data on the floor, and the CEO sees it instantly without asking.</div></div>
     </div>
   </div>
 </div></section>
 
-<!-- PRICING -->
 <section id="pricing" class="section"><div class="container">
-  <div style="text-align:center;"><div class="section-label bl reveal">Pricing</div><div class="section-title reveal">Simple, transparent<br>pricing</div><p class="section-sub reveal" style="margin:0 auto;">Start with a free 14-day trial. No credit card required. Cancel anytime.</p></div>
+  <div style="text-align:center"><div class="section-label bl reveal">Pricing</div><div class="section-title reveal">Simple, transparent<br>pricing</div><p class="section-sub reveal" style="margin:0 auto">Start with a free 14-day trial. No credit card required. Cancel anytime.</p></div>
   <div class="pricing-grid">
-    <div class="price-card reveal"><div class="price-tier">Starter</div><div class="price-amount">$9<span>.99/mo</span></div><div class="price-desc">For small teams getting started</div><ul class="price-features"><li>Up to 5 team members</li><li>All 9 core modules</li><li>GPS clock-in</li><li>WhatsApp reports</li><li>Offline mode</li></ul><a href="#" onclick="openTrialModal();return false" class="price-btn price-btn-outline">Start free trial</a></div>
-    <div class="price-card pop reveal"><div class="price-tier">Professional</div><div class="price-amount">$19<span>.99/mo</span></div><div class="price-desc">For growing manufacturers</div><ul class="price-features"><li>Up to 15 team members</li><li>Everything in Starter</li><li>Advanced reports & analytics</li><li>Recipe costing</li><li>CSV export</li><li>Priority support</li></ul><a href="#" onclick="openTrialModal();return false" class="price-btn price-btn-fill">Start free trial</a></div>
-    <div class="price-card reveal"><div class="price-tier">Enterprise</div><div class="price-amount">$39<span>.99/mo</span></div><div class="price-desc">For large operations</div><ul class="price-features"><li>Unlimited team members</li><li>Everything in Professional</li><li>Multi-location support</li><li>Audit log</li><li>Invoice generation</li><li>Dedicated support</li></ul><a href="#" onclick="openTrialModal();return false" class="price-btn price-btn-outline">Start free trial</a></div>
+    <div class="price-card reveal"><div class="price-tier">Starter</div><div class="price-amount">$9<span>.99/mo</span></div><div class="price-desc">For small teams getting started</div><ul class="price-features"><li>Up to 5 team members</li><li>All 9 core modules</li><li>GPS clock-in</li><li>WhatsApp reports</li><li>Offline mode</li></ul><a href="#" onclick="openModal();return false" class="pbtn pbtn-o">Start free trial</a></div>
+    <div class="price-card pop reveal"><div class="price-tier">Professional</div><div class="price-amount">$19<span>.99/mo</span></div><div class="price-desc">For growing manufacturers</div><ul class="price-features"><li>Up to 15 team members</li><li>Everything in Starter</li><li>Advanced reports & analytics</li><li>Recipe costing</li><li>CSV export</li><li>Priority support</li></ul><a href="#" onclick="openModal();return false" class="pbtn pbtn-f">Start free trial</a></div>
+    <div class="price-card reveal"><div class="price-tier">Enterprise</div><div class="price-amount">$39<span>.99/mo</span></div><div class="price-desc">For large operations</div><ul class="price-features"><li>Unlimited team members</li><li>Everything in Professional</li><li>Multi-location support</li><li>Audit log</li><li>Invoice generation</li><li>Dedicated support</li></ul><a href="#" onclick="openModal();return false" class="pbtn pbtn-o">Start free trial</a></div>
   </div>
 </div></section>
 
-<!-- CONTACT -->
-<section id="contact" class="section" style="background:var(--bg2);"><div class="container">
-  <div style="text-align:center;"><div class="section-label or reveal">Contact</div><div class="section-title reveal">Get in touch</div><p class="section-sub reveal" style="margin:0 auto;">Have questions? Need a demo? We're here to help you get started.</p></div>
+<section id="contact" class="section" style="background:var(--bg2)"><div class="container">
+  <div style="text-align:center"><div class="section-label or reveal">Contact</div><div class="section-title reveal">Get in touch</div><p class="section-sub reveal" style="margin:0 auto">Have questions? Need a demo? We're here to help you get started.</p></div>
   <div class="contact-grid">
-    <div class="contact-card reveal"><div class="contact-icon">📧</div><h3>Email</h3><p><a href="/cdn-cgi/l/email-protection#c7aea9a1a887b7b5a8a3b3b5a6a4aca2b5b7b5a8e9a4a8aa"><span class="__cf_email__" data-cfemail="c0a9aea6af80b0b2afa4b4b2a1a3aba5b2b0b2afeea3afad">[email&#160;protected]</span></a></p><p>We respond within 24 hours</p></div>
-    <div class="contact-card reveal"><div class="contact-icon">📱</div><h3>WhatsApp</h3><p><a href="https://wa.me/18761234567">Message us on WhatsApp</a></p><p>Quick questions and demos</p></div>
-    <div class="contact-card reveal"><div class="contact-icon">📍</div><h3>Location</h3><p>Kingston, Jamaica</p><p>Serving manufacturers worldwide</p></div>
+    <div class="contact-card reveal"><div style="font-size:36px;margin-bottom:16px">&#128231;</div><h3>Email</h3><p><a href="mailto:info@prodtrackerpro.com">info@prodtrackerpro.com</a></p><p>We respond within 24 hours</p></div>
+    <div class="contact-card reveal"><div style="font-size:36px;margin-bottom:16px">&#128241;</div><h3>WhatsApp</h3><p><a href="https://wa.me/18761234567">Message us on WhatsApp</a></p><p>Quick questions and demos</p></div>
+    <div class="contact-card reveal"><div style="font-size:36px;margin-bottom:16px">&#128205;</div><h3>Location</h3><p>Kingston, Jamaica</p><p>Serving manufacturers worldwide</p></div>
   </div>
 </div></section>
 
-<!-- CTA -->
 <section class="cta-section"><div class="container">
   <h2 class="reveal"><span class="b">Track.</span> <span class="o">Manage.</span> <span class="g">Grow.</span></h2>
   <p class="reveal">Join manufacturers like Reggae Carmella who've switched from paper to Production Tracker Pro.<br>Start your free 14-day trial today.</p>
-  <div class="reveal"><a href="#" onclick="openTrialModal();return false" class="btn-primary btn-orange" style="display:inline-block;">Start your free trial</a></div>
+  <div class="reveal"><a href="#" onclick="openModal();return false" class="btn-primary btn-orange" style="display:inline-block">Start your free trial</a></div>
 </div></section>
 
-<!-- TRIAL MODAL -->
-<div class="modal-overlay" id="trialModal" onclick="if(event.target===this)closeTrialModal()">
+<div class="modal-overlay" id="trialModal" onclick="if(event.target===this)closeModal()">
   <div class="modal">
-    <button class="modal-close" onclick="closeTrialModal()">&times;</button>
-
-    <!-- STEP 1: Choose -->
-    <div id="modalStep1">
+    <button class="modal-close" onclick="closeModal()">&#215;</button>
+    <div id="ms1">
       <h2><span class="b">Start</span> your <span class="o">free trial</span></h2>
       <p>Choose how you'd like to use Production Tracker Pro</p>
-
-      <div class="modal-option" onclick="document.getElementById('modalStep1').style.display='none';document.getElementById('modalStep2').style.display='block'">
-        <div class="modal-option-icon">🌐</div>
-        <div>
-          <h3>Open in browser</h3>
-          <p>Use instantly on any device — add to your home screen for an app-like experience.</p>
-        </div>
+      <div class="modal-option" onclick="document.getElementById('ms1').style.display='none';document.getElementById('ms2').style.display='block'">
+        <div style="font-size:32px;flex-shrink:0">&#127760;</div>
+        <div><h3>Open in browser</h3><p>Use instantly on any device — add to your home screen for an app-like experience.</p></div>
       </div>
-
-      <div class="modal-option" style="cursor:default;">
-        <div class="modal-option-icon">📱</div>
-        <div>
-          <h3>Download the app</h3>
-          <p>Native app for the best mobile experience with push notifications and offline access.</p>
-          <div class="modal-stores">
-            <div class="store-badge soon"><span class="icon">🍎</span> App Store — Coming Soon</div>
-            <div class="store-badge soon"><span class="icon">▶</span> Google Play — Coming Soon</div>
-          </div>
+      <div class="modal-option" style="cursor:default;opacity:0.7">
+        <div style="font-size:32px;flex-shrink:0">&#128241;</div>
+        <div><h3>Download the app</h3><p>Native app with push notifications and full offline access.</p>
+          <div><span class="store-badge">&#127822; App Store — Coming Soon</span><span class="store-badge">&#9654; Google Play — Coming Soon</span></div>
         </div>
       </div>
     </div>
-
-    <!-- STEP 2: Install to home screen -->
-    <div id="modalStep2" style="display:none;">
+    <div id="ms2" style="display:none">
       <h2><span class="b">Add to</span> <span class="o">home screen</span></h2>
-      <p>Install Production Tracker Pro on your phone for an app-like experience — no app store needed</p>
-
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:16px;">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
-          <span style="font-size:28px;">🍎</span>
-          <div><div style="font-family:var(--heading);font-weight:800;font-size:15px;text-transform:uppercase;">iPhone / iPad</div></div>
-        </div>
-        <div style="font-size:14px;color:var(--muted);line-height:2;">
-          <div><span style="color:var(--blue);font-weight:700;">1.</span> Open <strong style="color:var(--text);">app.prodtrackerpro.com</strong> in Safari</div>
-          <div><span style="color:var(--blue);font-weight:700;">2.</span> Tap the <strong style="color:var(--text);">Share button</strong> <span style="font-size:18px;">⬆</span> at the bottom</div>
-          <div><span style="color:var(--blue);font-weight:700;">3.</span> Scroll down and tap <strong style="color:var(--text);">"Add to Home Screen"</strong></div>
-          <div><span style="color:var(--blue);font-weight:700;">4.</span> Tap <strong style="color:var(--text);">"Add"</strong> — done!</div>
+      <p>Install Production Tracker Pro on your phone — no app store needed</p>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:16px">
+        <div style="font-family:var(--heading);font-weight:800;font-size:15px;text-transform:uppercase;margin-bottom:12px">&#127822; iPhone / iPad (Safari)</div>
+        <div style="font-size:14px;color:var(--muted);line-height:2.2">
+          <div><span style="color:var(--blue);font-weight:700">1.</span> Open <strong style="color:var(--text)">app.prodtrackerpro.com</strong> in Safari</div>
+          <div><span style="color:var(--blue);font-weight:700">2.</span> Tap the <strong style="color:var(--text)">Share button</strong> &#11014; at the bottom</div>
+          <div><span style="color:var(--blue);font-weight:700">3.</span> Scroll down, tap <strong style="color:var(--text)">"Add to Home Screen"</strong></div>
+          <div><span style="color:var(--blue);font-weight:700">4.</span> Tap <strong style="color:var(--text)">"Add"</strong> — done!</div>
         </div>
       </div>
-
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:24px;">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
-          <span style="font-size:28px;">🤖</span>
-          <div><div style="font-family:var(--heading);font-weight:800;font-size:15px;text-transform:uppercase;">Android</div></div>
-        </div>
-        <div style="font-size:14px;color:var(--muted);line-height:2;">
-          <div><span style="color:var(--orange);font-weight:700;">1.</span> Open <strong style="color:var(--text);">app.prodtrackerpro.com</strong> in Chrome</div>
-          <div><span style="color:var(--orange);font-weight:700;">2.</span> Tap the <strong style="color:var(--text);">menu</strong> <span style="font-size:16px;">⋮</span> (three dots, top right)</div>
-          <div><span style="color:var(--orange);font-weight:700;">3.</span> Tap <strong style="color:var(--text);">"Install app"</strong> or <strong style="color:var(--text);">"Add to Home Screen"</strong></div>
-          <div><span style="color:var(--orange);font-weight:700;">4.</span> Tap <strong style="color:var(--text);">"Install"</strong> — done!</div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:24px">
+        <div style="font-family:var(--heading);font-weight:800;font-size:15px;text-transform:uppercase;margin-bottom:12px">&#129302; Android (Chrome)</div>
+        <div style="font-size:14px;color:var(--muted);line-height:2.2">
+          <div><span style="color:var(--orange);font-weight:700">1.</span> Open <strong style="color:var(--text)">app.prodtrackerpro.com</strong> in Chrome</div>
+          <div><span style="color:var(--orange);font-weight:700">2.</span> Tap the <strong style="color:var(--text)">menu &#8942;</strong> (three dots, top right)</div>
+          <div><span style="color:var(--orange);font-weight:700">3.</span> Tap <strong style="color:var(--text)">"Install app"</strong> or <strong style="color:var(--text)">"Add to Home Screen"</strong></div>
+          <div><span style="color:var(--orange);font-weight:700">4.</span> Tap <strong style="color:var(--text)">"Install"</strong> — done!</div>
         </div>
       </div>
-
-      <a href="https://app.prodtrackerpro.com" style="display:block;width:100%;padding:16px;border-radius:10px;text-align:center;text-decoration:none;font-weight:700;font-size:16px;font-family:var(--body);background:var(--blue);color:#fff;margin-bottom:12px;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Open app.prodtrackerpro.com</a>
-      <button onclick="document.getElementById('modalStep1').style.display='block';document.getElementById('modalStep2').style.display='none'" style="display:block;width:100%;padding:12px;border-radius:10px;text-align:center;font-weight:600;font-size:14px;font-family:var(--body);background:none;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--blue)'" onmouseout="this.style.borderColor='var(--border)'">← Back</button>
+      <a href="https://app.prodtrackerpro.com" style="display:block;width:100%;padding:16px;border-radius:10px;text-align:center;text-decoration:none;font-weight:700;font-size:16px;font-family:var(--body);background:var(--blue);color:#fff;margin-bottom:12px">Open app.prodtrackerpro.com</a>
+      <button onclick="document.getElementById('ms1').style.display='block';document.getElementById('ms2').style.display='none'" style="display:block;width:100%;padding:12px;border-radius:10px;text-align:center;font-weight:600;font-size:14px;font-family:var(--body);background:none;border:1px solid var(--border);color:var(--muted);cursor:pointer">&#8592; Back</button>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer><div class="container">
   <div class="footer-grid">
-    <div class="footer-brand"><div class="nav-logo-mark"><span class="w">Production </span><span class="b">Tracker </span><span class="o">Pro</span></div><p>Production management software built for small manufacturers. From raw materials to final delivery — track every step of your process.</p></div>
+    <div class="footer-brand"><div class="nav-logo-mark"><span class="w">Production </span><span class="b">Tracker </span><span class="o">Pro</span></div><p>Production management software built for small manufacturers. From raw materials to final delivery.</p></div>
     <div class="footer-col"><h4>Product</h4><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#how">How it works</a><a href="#casestudy">Case study</a><a href="https://app.prodtrackerpro.com">Log in</a></div>
-    <div class="footer-col"><h4>Contact</h4><a href="/cdn-cgi/l/email-protection#244d4a424b6454564b40505645474f415654564b0a474b49"><span class="__cf_email__" data-cfemail="b5dcdbd3daf5c5c7dad1c1c7d4d6ded0c7c5c7da9bd6dad8">[email&#160;protected]</span></a><a href="https://wa.me/18761234567">WhatsApp</a><a href="#contact">Get in touch</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="mailto:info@prodtrackerpro.com">info@prodtrackerpro.com</a><a href="https://wa.me/18761234567">WhatsApp</a><a href="#contact">Get in touch</a></div>
     <div class="footer-col"><h4>Legal</h4><a href="#">Privacy policy</a><a href="#">Terms of service</a></div>
   </div>
-  <div class="footer-bottom"><p>&copy; 2026 Production Tracker Pro. A product of Reggae Carmella LTD.</p><p>Kingston, Jamaica</p></div>
+  <div class="footer-bottom"><p>&#169; 2026 Production Tracker Pro. A product of Reggae Carmella LTD.</p><p>Kingston, Jamaica</p></div>
 </div></footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function openTrialModal(){document.getElementById('trialModal').classList.add('active')}
-function closeTrialModal(){document.getElementById('trialModal').classList.remove('active');document.getElementById('modalStep1').style.display='block';document.getElementById('modalStep2').style.display='none'}
-const observer=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>observ
+<script>
+function openModal(){document.getElementById('trialModal').classList.add('active')}
+function closeModal(){document.getElementById('trialModal').classList.remove('active');document.getElementById('ms1').style.display='block';document.getElementById('ms2').style.display='none'}
+var obs=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal()});
+</script>
+</body>
+</html>
